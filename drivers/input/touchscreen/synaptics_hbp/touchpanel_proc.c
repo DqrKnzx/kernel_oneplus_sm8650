@@ -1298,7 +1298,6 @@ static int data_self_delta_open(struct inode *inode, struct file *file)
 
 DECLARE_PROC_OPS(tp_self_delta_data_proc_fops, data_self_delta_open, seq_read, NULL, single_release);
 
-
 /*proc/touchpanel/debug_info/self_raw*/
 static int tp_self_raw_debug_read_func(struct seq_file *s, void *v)
 {

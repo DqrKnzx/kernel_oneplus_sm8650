@@ -712,6 +712,8 @@ struct syna_tcm {
 	bool data_record;
 	bool enter_force_doze;
 	bool under_water;
+	int single_tap_pressed;
+	int double_tap_pressed;
 
 	unsigned int waiting_frame;
 	unsigned int wait_for_ioctl_operation;
@@ -965,6 +967,8 @@ static inline int syna_tcm_alloc_mem(struct tcm_buffer *buffer,
 
 void touch_call_notifier_fp(struct syna_tcm *tcm, struct fp_underscreen_info *fp_info);
 void film_call_notifier_fp(struct syna_tcm *tcm, struct touch_film_info *film_info);
+
+extern struct kobject *g_sysfs_dir;
 
 #endif /* end of _SYNAPTICS_TCM2_DRIVER_H_ */
 
